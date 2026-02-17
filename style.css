@@ -1,3 +1,28 @@
+:root {
+  --color-primary: #6c5ce7;
+  --color-accent: #fd79a8;
+  --color-secondary: #00cec9;
+  --color-bg: #0a0a1a;
+  --color-card: #1a1a2e;
+  --color-text: #f0f0f5;
+  --color-muted: #a0a0b5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -25,7 +50,7 @@
 .name {
   font-size: 2rem;
   font-weight: 700;
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,7 +59,7 @@
 .tagline {
   margin-top: 0.25rem;
   font-size: 1rem;
-  color: var(--color-text-muted);
+  color: var(--color-muted);
 }
 
 .links {
@@ -49,7 +74,7 @@
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
-  background: var(--color-bg-card);
+  background: var(--color-card);
   color: var(--color-text);
   text-decoration: none;
   font-size: 0.95rem;
@@ -61,10 +86,6 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
   border-color: var(--color-primary);
-}
-
-.link svg {
-  font-size: 1.15rem;
 }
 
 @media (max-width: 480px) {
