@@ -5,7 +5,7 @@ function AvatarSidebar() {
     <aside className={styles.sidebar}>
       <div className={styles.avatarWrapper}>
         <img
-          src={`${import.meta.env.BASE_URL}avatar.png`}
+          src={`${import.meta.env.BASE_URL}dinoFace.jpeg`}
           alt="Avatar"
           className={styles.avatar}
         />
