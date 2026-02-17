@@ -1,20 +1,46 @@
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa'
 import styles from './App.module.css'
-import AvatarSidebar from './components/AvatarSidebar/AvatarSidebar'
-import Hero from './components/Hero/Hero'
-import SocialLinks from './components/SocialLinks/SocialLinks'
-import ResumeButton from './components/ResumeButton/ResumeButton'
 
 function App() {
   return (
-    <div className={styles.layout}>
-      <AvatarSidebar />
-      <main className={styles.main}>
-        <Hero />
-        <SocialLinks />
-        <ResumeButton />
-        <footer className={styles.footer}>
-          <p>&copy; 2026 Dino Zhao. Built with React + Vite.</p>
-        </footer>
+    <div className={styles.page}>
+      <main className={styles.card}>
+        <img
+          src={`${import.meta.env.BASE_URL}dinoFace.jpeg`}
+          alt="Dino Zhao"
+          className={styles.avatar}
+        />
+        <h1 className={styles.name}>Dino Zhao</h1>
+        <p className={styles.tagline}>Developer</p>
+        <div className={styles.links}>
+          <a
+            href="https://github.com/DinoZ-p"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            <FaGithub />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dinozhao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            <FaLinkedin />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            <FaFileAlt />
+            <span>Resume</span>
+          </a>
+        </div>
       </main>
     </div>
   )
