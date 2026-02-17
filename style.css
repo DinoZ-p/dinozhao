@@ -88,6 +88,18 @@ body {
   border-color: var(--color-primary);
 }
 
+.contact {
+  margin-top: 2.5rem;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 480px) {
   .links {
     flex-direction: column;
